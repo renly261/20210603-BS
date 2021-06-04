@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .container {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar {
+            width: 200px;
+            border: 1px solid #333;
+            position: fixed;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <div class="d-inline d-md-block d-lg-flex d-xl-none">
+        <span class="bg-primary">aaa</span>
+        <span class="bg-info">aaa</span>
+    </div>
+
+    <div class="d-inline d-md-block d-lg-flex d-xl-none">
+        <span class="bg-primary">aaa</span>
+        <span class="bg-info">aaa</span>
+    </div>
+
+    <div class="sidebar d-none d-lg-block ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora officiis blanditiis itaque cupiditate
+        voluptatum quisquam omnis molestiae accusantium deleniti.
+    </div>
+
+    <!-- 1 在列印模式下不會出現 2 3 在列印模式下會出現 -->
+    <div class="d-print-none">1</div>
+    <div class="d-none d-print-block">2</div>
+    <div class="d-none d-lg-block d-print-block">3</div>
+</body>
+
+</html>

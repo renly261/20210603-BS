@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .container {
+            margin-bottom: 1rem;
+        }
+
+        /* span 要先轉型 display: inline-block 在設定寬高才會顯示出來 */
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+
+        .row>div {
+            height: 100px;
+            border: 1px dashed #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row>div:nth-child(2)~div {
+            border-left: none;
+        }
+
+        /* ::after 會產生在子層的最底下 產生時是 inline 要轉型成 block 才能做樣式 */
+        .box::after {
+            content: '';
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <div class="box clearfix">
+        <div>aaa</div>
+    </div>
+
+    <div class="container">
+        <h2>clearfix</h2>
+    </div>
+    <div class="container">
+        <!-- 若沒有 clearfix 中間高度會不見 -->
+        <div class="bg-info clearfix">
+            <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
+            <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>overflow</h2>
+    </div>
+    <div class="container">
+        <!-- 若沒有 overflow-auto 或 overflow-hidden 中間高度會不見 -->
+        <div class="bg-info overflow-auto">
+            <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
+            <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+        </div>
+    </div>
+
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="wrap">
+        <!-- float 會變成文繞圖 要不被 float 影響排版可以用 BFC -->
+        <div style="float:left">
+            <img src="https://picsum.photos/100/100/?random=1">
+        </div>
+        <div style="overflow:auto">
+            相關圖片原本女性銷售問道詳細內容更多手冊，遠程模型進來初音呼吸請求優秀各地另一個，我覺得不得不網上有着年輕人辛苦形象圖片因為轉移以後團體，自己圖片，學校集中，威脅她說交給，高手女朋友不多日韓一次近日考生，招標專家勞動皇帝所有真是期間，無派半年分鐘，高中保。
+            相關圖片原本女性銷售問道詳細內容更多手冊，遠程模型進來初音呼吸請求優秀各地另一個，我覺得不得不網上有着年輕人辛苦形象圖片因為轉移以後團體，自己圖片，學校集中，威脅她說交給，高手女朋友不多日韓一次近日考生，招標專家勞動皇帝所有真是期間，無派半年分鐘，高中保。
+            相關圖片原本女性銷售問道詳細內容更多手冊，遠程模型進來初音呼吸請求優秀各地另一個，我覺得不得不網上有着年輕人辛苦形象圖片因為轉移以後團體，自己圖片，學校集中，威脅她說交給，高手女朋友不多日韓一次近日考生，招標專家勞動皇帝所有真是期間，無派半年分鐘，高中保。
+            相關圖片原本女性銷售問道詳細內容更多手冊，遠程模型進來初音呼吸請求優秀各地另一個，我覺得不得不網上有着年輕人辛苦形象圖片因為轉移以後團體，自己圖片，學校集中，威脅她說交給，高手女朋友不多日韓一次近日考生，招標專家勞動皇帝所有真是期間，無派半年分鐘，高中保。
+            相關圖片原本女性銷售問道詳細內容更多手冊，遠程模型進來初音呼吸請求優秀各地另一個，我覺得不得不網上有着年輕人辛苦形象圖片因為轉移以後團體，自己圖片，學校集中，威脅她說交給，高手女朋友不多日韓一次近日考生，招標專家勞動皇帝所有真是期間，無派半年分鐘，高中保。
+        </div>
+    </div>
+
+</body>
+
+</html>

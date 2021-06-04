@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .container {
+            margin-bottom: 1rem;
+        }
+
+        /* span 要先轉型 display: inline-block 在設定寬高才會顯示出來 */
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+
+        .row>div {
+            height: 100px;
+            border: 1px dashed #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row>div:nth-child(2)~div {
+            border-left: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <div class="container">
+        <h2>border</h2>
+    </div>
+    <div class="container" style="background-color:#333">
+        <div class="row">
+            <div class="col border-0"></div>
+            <div class="col-2">
+                <span class="border"></span>
+            </div>
+            <div class="col-2">
+                <span class="border-top"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border-right"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border-bottom"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border-left"></span>
+            </div>
+            <div class="col"></div>
+        </div>
+
+    </div>
+
+    <!-- 要增加減少必須要先給線 border -->
+    <div class="container">
+        <h2>減少</h2>
+    </div>
+    <div class="container" style="background-color:#333">
+        <div class="row">
+            <div class="col border-0"></div>
+            <div class="col-2">
+                <span class="border"></span>
+            </div>
+            <div class="col-2">
+                <span class="border border-top-0"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border border-right-0"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border border-bottom-0"></span>
+            </div>
+
+            <div class="col-2">
+                <span class="border border-left-0"></span>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>邊框色彩</h2>
+    </div>
+    <div class="container" style="background-color:#333">
+        <div class="row">
+            <div class="col border-0"></div>
+            <div class="col">
+                <span class="border border-primary"></span>
+            </div>
+            <div class="col">
+                <span class="border border-secondary"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-success"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-danger"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-warning"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-info"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-dark"></span>
+            </div>
+
+            <div class="col">
+                <span class="border border-white"></span>
+            </div>
+
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>border-radius</h2>
+    </div>
+    <div class="container" style="background-color:#aaa">
+        <div class="row">
+            <div class="col border-0"></div>
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=1" class="rounded">
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=2" class="rounded-top">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=3" class="rounded-right">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=4" class="rounded-bottom">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=5" class="rounded-left">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=6" class="rounded-circle">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/100/75/?random=7" class="rounded-pill">
+            </div>
+
+            <div class="col">
+                <img src="https://picsum.photos/75/75/?random=8" class="rounded-0">
+            </div>
+
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+
+</html>
